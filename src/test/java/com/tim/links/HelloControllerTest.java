@@ -1,15 +1,16 @@
 package com.tim.links;
 
 import com.tim.links.controller.HelloController;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.Assert.assertEquals;
 
-class HelloControllerTest {
+public class HelloControllerTest {
+
+    private final HelloController helloController = new HelloController();
 
     @Test
-    void test() {
-        String actual = new HelloController().hello();
-        assertEquals("hello", actual);
+    public void testHelloController() {
+        assertEquals("Hello!", helloController.hello());
     }
 }
